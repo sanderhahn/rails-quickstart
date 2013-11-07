@@ -9,7 +9,7 @@ Download and install VirtualBox and Vagrant:
 vagrant up
 ```
 
-The `provision.sh` is automatically executed and installs Ruby, Rails and the Postgres database.
+The `provision.sh` is automatically executed and installs Ruby and the Postgres database.
 
 # Create Rails Project
 
