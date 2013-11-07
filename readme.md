@@ -1,5 +1,10 @@
 # Start and Provision Virtual Machine
 
+Download and install VirtualBox and Vagrant:
+
+- [Download Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+- [Download Vagrant](http://downloads.vagrantup.com/)
+
 ```bash
 vagrant up
 ```
