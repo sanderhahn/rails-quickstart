@@ -4,8 +4,7 @@
 vagrant up
 ```
 
-The `provision.sh` installs ruby, rails and the postgres database.
-The provisioning might take some time.
+The `provision.sh` is automatically executed and installs Ruby, Rails and the Postgres database.
 
 # Create Rails Project
 
@@ -35,20 +34,16 @@ tmux
 ```
 
 Press `Ctrl-B + "` to get a second shell for your convenience.
-Switch between the shells by pressing Ctrl-B and up/down arrow.
-In the first shell i run the server and watching the log and in
+Switch between the shells by pressing Ctrl-B and the up/down arrow.
+In the first shell i run the server and watch the log and in
 the second shell i run rails and shell commands.
 
-# Scaffold Blog Post
+# Scaffold and Start Server
 
 ```bash
 rails generate scaffold Post title:string text:text
 rake db:migrate
-```
 
-# Start Server
-
-```
 rails server
 ```
 
@@ -56,9 +51,15 @@ Open a webbrowser and navigate to `http://localhost:3000/posts`.
 
 # References
 
-[Rails API](http://api.rubyonrails.org/)
-[Postgres Docs](http://www.postgresql.org/docs/9.1/interactive/index.html)
-[Vagrant Docs](http://docs.vagrantup.com/v2/)
+- [Rails API](http://api.rubyonrails.org/)
+- [Postgres Docs](http://www.postgresql.org/docs/9.1/interactive/index.html)
+- [Vagrant Docs](http://docs.vagrantup.com/v2/)
+
+# Backup Database
+
+```bash
+pg_dump blog_development >blog_backup.sql
+```
 
 # Save Source in Github or Bitbucket
 
@@ -72,14 +73,8 @@ git init
 git add -A
 git commit -m 'initial commit'
 
-git remote add origin ssh://git@bitbucket.org/yourname/yourrepo.git
-git push -u origin
-```
-
-# Backup Database
-
-```bash
-pg_dump blog_development >blog_backup.sql
+git remote add origin git@github.com:yourname/yourrepo.git
+git push -u origin master
 ```
 
 # Cleanup the VM
