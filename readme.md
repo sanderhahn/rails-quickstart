@@ -66,6 +66,15 @@ Open a webbrowser and navigate to `http://localhost:3000/posts`.
 pg_dump blog_development >blog_backup.sql
 ```
 
+# Access Gem Sources
+
+Want to know what Rails is doing to make your app work?
+Copy the gems into a location that is easy accessible.
+
+```bash
+cp -R ~/.gem /vagrant/gem_home
+```
+
 # Save Source in Github or Bitbucket
 
 Use git on your local machine:
