@@ -121,6 +121,15 @@ Package` and select `Ruby Slim`.
 
 [Haml](http://haml.info/) is another popular template language.
 
+# Popular Gems
+
+Many of these gems have excellent introductions at [Railscasts](http://railscasts.com/) by Ryan Bates.
+
+- [Simple Form](https://github.com/plataformatec/simple_form) gives nice form helpers [Railscast #234](http://railscasts.com/episodes/234-simple-form).
+- [Kaminari](https://github.com/amatsuda/kaminari) paginate through lists [Railscast #254](http://railscasts.com/episodes/254-pagination-with-kaminari). 
+- [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) add image and file uploads [Railscast #253](http://railscasts.com/episodes/253-carrierwave-file-uploads).
+- [Devise](https://github.com/plataformatec/devise) authenticates your users [Railscast #209](http://railscasts.com/episodes/209-introducing-devise).
+
 # Backup Database
 
 ```bash
