@@ -60,6 +60,35 @@ Open a webbrowser and navigate to `http://localhost:3000/posts`.
 - [Postgres Docs](http://www.postgresql.org/docs/9.1/interactive/index.html)
 - [Vagrant Docs](http://docs.vagrantup.com/v2/)
 
+# Better Errors
+
+[Better Errors](https://github.com/charliesome/better_errors) is a gem that provides a nicer stack trace and local variable assignments when something is wrong. Install in the `Gemfile`:
+
+```ruby
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+```
+
+Now run:
+
+```bash
+bundle
+```
+
+In the `config/environments/development.rb` add before the end:
+
+```ruby
+  BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']
+```
+
+Now restart your server add allow your guest OS access:
+
+```bash
+TRUSTED_IP=10.0.2.2 rails server
+```
+
 # Backup Database
 
 ```bash
