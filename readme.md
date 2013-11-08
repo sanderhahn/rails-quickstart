@@ -94,7 +94,10 @@ TRUSTED_IP=10.0.2.2 rails server
 Rails prints out requests for assets which can make it difficult to read the log. Add the (Quiet Assets)[https://github.com/evrone/quiet_assets] gem to suppress these messages. Add to your `Gemfile`: 
 
 ```ruby
-gem 'quiet_assets', :group => :development
+group :development
+  gem "quiet_assets"
+  gem "thin"
+end
 ```
 
 # Slim Templates
