@@ -103,8 +103,8 @@ end
 ```
 
 Restart the server to get the slim engine going. Convert an erb template
-with its slim equivalent using: `erb2slim example.html.erb example.html.slim`.
-To convert all your erb templates into slim versions you can use irb to run:
+into a slim version using: `erb2slim example.html.erb example.html.slim`.
+To convert all your erb templates into slim run in`irb`:
 
 ```ruby
 Dir['**/*.erb'].each do |erb|
@@ -116,7 +116,7 @@ end
 
 Get Slim syntax highlighting working in Sublime Text by installing
 [Package Control](https://sublime.wbond.net/installation). Restart
-Sublime and use `Ctrl-Shift-P` followed by `Package Controll: Install
+Sublime and use `Ctrl-Shift-P` followed by `Package Control: Install
 Package` and select `Ruby Slim`.
 
 [Haml](http://haml.info/) is another popular template language.
