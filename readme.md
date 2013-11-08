@@ -89,6 +89,14 @@ Now restart your server add allow your guest OS access:
 TRUSTED_IP=10.0.2.2 rails server
 ```
 
+# Quiet Assets
+
+Rails prints out requests for assets which can make it difficult to read the log. Add the (Quiet Assets)[https://github.com/evrone/quiet_assets] gem to suppress these messages. Add to your `Gemfile`: 
+
+```ruby
+gem 'quiet_assets', :group => :development
+```
+
 # Slim Templates
 
 [Slim Lang](Slim) is a lightweight templating language that can
