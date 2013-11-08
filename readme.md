@@ -89,6 +89,38 @@ Now restart your server add allow your guest OS access:
 TRUSTED_IP=10.0.2.2 rails server
 ```
 
+# Slim Templates
+
+[Slim Lang](Slim) is a lightweight templating language that can
+replace erb templates. Install in the `Gemfile`:
+
+```ruby
+gem "slim"
+
+group :development do
+  gem "html2slim"
+end
+```
+
+Restart the server to get the slim engine going. Convert an erb template
+with its slim equivalent using: `erb2slim example.html.erb example.html.slim`.
+To convert all your erb templates into slim versions you can use irb to run:
+
+```ruby
+Dir['**/*.erb'].each do |erb|
+  slim = erb.gsub(/\.erb$/, '.slim')
+  `erb2slim #{erb} #{slim}`
+  `mv #{erb} #{erb}.bak`
+end
+```
+
+Get Slim syntax highlighting working in Sublime Text by installing
+[Package Control](https://sublime.wbond.net/installation). Restart
+Sublime and use `Ctrl-Shift-P` followed by `Package Controll: Install
+Package` and select `Ruby Slim`.
+
+[Haml](http://haml.info/) is another popular template language.
+
 # Backup Database
 
 ```bash
