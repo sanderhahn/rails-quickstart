@@ -177,3 +177,12 @@ git push -u origin master
 ```bash
 vagrant destroy
 ```
+
+# Useful Tools
+
+- [Annotate](https://github.com/ctran/annotate_models)
+- [Rubocop](https://github.com/bbatsov/rubocop)
+- [SDoc](https://github.com/voloko/sdoc)
+- [Pry](http://pryrepl.org/)
+
+Also see a [teardown of useful gems](http://www.dwellable.com/blog/Rails-Rumble-Gem-Teardown) used in the [Rails Rumble](http://railsrumble.com/).
